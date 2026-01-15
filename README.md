@@ -2,6 +2,9 @@
 
 **End-to-End 5G Deployment using Open5GS + srsRAN (CU/DU Split) + srsUE**
 
+<img width="700" height="400" alt="image" src="./images/srsRAN-F1AP-Split.png" />
+
+
 ---
 
 ## Overview
