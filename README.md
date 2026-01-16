@@ -282,6 +282,8 @@ sudo ip netns add ue1
 Run srsUE:
 
 ```bash
+cd ~/
+wget https://docs.srsran.com/projects/project/en/latest/_downloads/fbb79b4ff222d1829649143ca4cf1446/ue_zmq.conf
 cd ~/srsRAN_4G/build/srsue/src
 sudo ./srsue ~/ue_zmq.conf
 ```
@@ -290,15 +292,10 @@ sudo ./srsue ~/ue_zmq.conf
 
 ## Routing Configuration
 
-### Host Routing
-
 ```bash
+# Host Routing
 sudo ip route add 10.45.0.0/16 via 10.53.1.2
-```
-
-### UE Namespace Routing
-
-```bash
+# UE Namespace Routing
 sudo ip netns exec ue1 ip route add default via 10.45.1.1 dev tun_srsue
 ```
 
