@@ -279,13 +279,11 @@ Create network namespace:
 sudo ip netns add ue1
 ```
 
-Run UE:
+Run srsUE:
 
 ```bash
-sudo ./srsue \
-  --rf.device_name=zmq \
-  --rf.device_args="tx_port=tcp://*:2001,rx_port=tcp://localhost:2000,base_srate=23.04e6" \
-  --gw.netns=ue1
+cd ~/srsRAN_4G/build/srsue/src
+sudo ./srsue ~/ue_zmq.conf
 ```
 
 ---
